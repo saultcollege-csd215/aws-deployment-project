@@ -21,6 +21,7 @@ The goal of this project is to practice
 ## Setup
 
 1. Open this repository as a Devcontainer in VS Code
+2. Create a branch off of `main` and do your work for this project in that branch.
 2. Ensure you are in the virtual Python evironment (you should see `(.venv)` at the start of your terminal prompt)
 
    > If not, run `source ./venv/bin/activate` in the terminal to activate it. You may need to do this each time you load the Devcontainer.
@@ -264,7 +265,7 @@ For this workflow, you will use SSH to run a deployment script on the EC2 instan
 4. Verify that your changes are live by accessing your Flask/Lambda app in a web browser.
 
    > **NOTE:** If you changed your Flask app, you may need to clear your browser cache or do a hard refresh (Ctrl+F5) to see the changes.
-   
+
 5. DELIVERABLES:
    1. Take a screenshot of the "Actions" tab showing the successful deployment workflows. Save this screenshot as `deliverables/ci-cd-pipeline.png`.
    3. Add a screenshot of your DynamoDB table showing dice rolls from both the Flask app and the Lambda function. Save this screenshot as `deliverables/dynamodb-entries.png`.
@@ -281,3 +282,9 @@ For this workflow, you will use SSH to run a deployment script on the EC2 instan
       - Your description of how many requests per month the Lambda function could handle before it becomes more expensive than the EC2 instance.
    2. Save this screenshot as `deliverables/cost-analysis.png`.
    
+   ## Submission
+
+   1. Ensure all deliverables are saved in the `deliverables/` folder. (Search for `DELIVERABLE` in this README to find them all.)
+   2. Commit and push all your changes to your branch in the GitHub repository.
+   3. In a web browser, navigate to your GitHub repository and create a Pull Request with `main` as the base branch and your branch as the compare branch.
+   4. Submit the Pull Request URL to your instructor for grading.
