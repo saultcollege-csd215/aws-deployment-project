@@ -8,7 +8,10 @@ SOURCE_DIR="$ROOT/app"
 BUILD_DIR="lambda_package"
 ZIP_FILE="lambda_function.zip"
 
-set -e   # Stop on errors
+# -e : exit immediately on error
+# -u : treat unset variables as an error
+# -x : print the commands as they get executed (so they show up in GitHub Actions logs)
+set -eux
 
 # Fail early if LAMBDA_NAME is not set properly
 if [[ -z "${LAMBDA_NAME// }" || "$LAMBDA_NAME" == \<* ]]; then
