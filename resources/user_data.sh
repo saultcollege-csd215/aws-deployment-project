@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# -e : exit immediately on error
+# -u : treat unset variables as an error
+# -x : print the commands as they get executed (so they show up in GitHub Actions logs)
 set -eux
+
 
 # Update system packages and install needed software
 dnf update -y
@@ -14,6 +18,7 @@ mkdir -p $APP_DIR
 # Clone your application repository (replace with your repo URL)
 git clone !!!Your clone URL here!!! $APP_DIR
 
+# Set the owner of the repo folder to be the user account that will ultimately run the app
 chown -R ec2-user:ec2-user $APP_DIR
 
 cd $APP_DIR
